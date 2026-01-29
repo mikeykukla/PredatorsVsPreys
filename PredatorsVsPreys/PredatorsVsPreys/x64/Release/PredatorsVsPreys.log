@@ -1,0 +1,20 @@
+﻿  application.cpp
+  entity.cpp
+  main.cpp
+  Running Code Analysis for C/C++...
+  Generating code
+  1714 of 1734 functions (98.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  PredatorsVsPreys.vcxproj -> C:\Users\micha\Source\Repos\PredatorsVsPreys\PredatorsVsPreys\x64\Release\PredatorsVsPreys.exe
+  0 File(s) copied
+  0 File(s) copied
+  0 File(s) copied
+  ========================================
+  ✅ Exe: PredatorsVsPreys.exe
+  ✅ DLL-e SFML: sfml-graphics-2.dll, sfml-system-2.dll, sfml-window-2.dll
+  ✅ Font: skopiowany
+  ✅ config.json: skopiowany
+  📦 Wszystko w: C:\Users\micha\Source\Repos\PredatorsVsPreys\PredatorsVsPreys\dist\
+  ========================================

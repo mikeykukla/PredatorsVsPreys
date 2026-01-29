@@ -1,0 +1,16 @@
+﻿  application.cpp
+  entity.cpp
+  main.cpp
+  Running Code Analysis for C/C++...
+  Generating Code...
+  PredatorsVsPreys.vcxproj -> C:\Users\micha\Source\Repos\PredatorsVsPreys\PredatorsVsPreys\x64\Debug\PredatorsVsPreys.exe
+  0 File(s) copied
+  0 File(s) copied
+  0 File(s) copied
+  ========================================
+  ✅ Exe: PredatorsVsPreys.exe
+  ✅ DLL-e SFML: sfml-graphics-d-2.dll, sfml-system-d-2.dll, sfml-window-d-2.dll
+  ✅ Font: skopiowany
+  ✅ config.json: skopiowany
+  📦 Wszystko w: C:\Users\micha\Source\Repos\PredatorsVsPreys\PredatorsVsPreys\dist\
+  ========================================

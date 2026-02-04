@@ -8,11 +8,11 @@
 int main() 
 {
     const std::string reportFile = "report.json";
-    Application app; // Tworzenie obiektu aplikacji
+    Application app; 
 
     try {
-        app.run(); // Glowna petla symulacji
-        app.readAndDisplayStats(reportFile); // Po zakonczeniu symulacji odczytaj i wyswietl raport
+        app.run(); 
+        app.readAndDisplayStats(reportFile); 
     }
     catch (const std::exception& e) {
         std::cerr << "An error occurred: " << e.what() << std::endl;

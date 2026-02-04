@@ -5,59 +5,48 @@
 #include "Entity.h"
 #include "Statistics.h" 
 
-// Glowna klasa aplikacji - zarzadza cala symulacja
-// Rendering, aktualizacja stanu, zapis i odczyt statystyk
 class Application
 {
 public:
-	// Konstruktor - inicjalizacja okna, encji, pixeli i konfiguracje
+
 	Application();
 
-	// Glowna petla aplikacji
 	void run();
 
-	//  Zapis statystyk symulacji do pliku JSON
 	void saveState(const std::string& fileName);
 
-	// Odczytuje i wyswietla statystki z pliku JSON po zakonczeniu symulacji
 	void readAndDisplayStats(const std::string& fileName);
 
 private:
-	int WIDTH = 700; //default WIDTH
-	int HEIGHT = 700; //default HEIGHT
+	int WIDTH = 700;
+	int HEIGHT = 700;
 
-	// Konwertuje wsporzedne 2D (x, y) na indeks 1D w wektorze
 	int getIndex(int x, int y) const;
 
-	// Obsluguje zdarzenia okna
 	void pollEvents();
 
-	// Aktualizuje stan wszystkich encji w kazdej klatce
 	void update();
 
-	// Aktualizuje zachowanie drapieznika (polowanie, ruch, smierc)
 	void updatePredator(std::unique_ptr<Entity>& thisEntity, std::unique_ptr<Entity>& otherEntity);
 
-	// Aktualizuje zachowanie ofiary (rozmnazanie, ruch)
 	void updatePrey(std::unique_ptr<Entity>& thisEntity, std::unique_ptr<Entity>& otherEntity);
 
-	// Wczytuje konfiguracje (szerokosc i wysokosc okna) 
 	void loadConfig(const std::string& fileName);
 
-	std::unique_ptr<sf::RenderWindow> m_window; // Wskaźnik do okna aplikacji SFML
-	std::vector<sf::Vertex> m_pixels; // Pixele do renderowania (pozycja, kolor)
-	std::vector<std::unique_ptr<Entity>> m_entities; // Dynamiczna tablica wskaźników do encji (typ, zdrowie, kolor, pozycja)
+	std::unique_ptr<sf::RenderWindow> m_window; 
+	std::vector<sf::Vertex> m_pixels; 
+	std::vector<std::unique_ptr<Entity>> m_entities; 
 
-	int m_preyCount = 0; // Aktualna liczba ofiar
-	int m_predatorCount = 0; // Aktualna liczba drapieznikow
+	int m_preyCount = 0; 
+	int m_predatorCount = 0; 
 
 
 	std::unique_ptr<sf::Font> m_font;
-	sf::Text m_preyCountText; // Tekst wyswietlajacy liczbe ofiar
-	sf::Text m_predatorCountText; // Tekst wyswietlajacy liczbe drapieznikow
+	sf::Text m_preyCountText; 
+	sf::Text m_predatorCountText; 
 
-	Statistics<int> m_reproducedPreyStats; // Statystyki rozmnozonych ofiar
-	Statistics<int> m_eatenPreyStats; // Statystyki zjedzonych ofiar
+	Statistics<int> m_reproducedPreyStats; 
+	Statistics<int> m_eatenPreyStats; 
 
 	sf::Clock m_saveClock;
 };
